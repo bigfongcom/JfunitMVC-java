@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE jfunit[
+	<!ELEMENT jfunit (actions)>
+	<!ELEMENT actions (action*)>
+	<!ELEMENT action (result*)>
+	<!ATTLIST action
+			  name CDATA #REQUIRED
+			  class CDATA #REQUIRED>
+	<!ELEMENT result (#PCDATA)>
+	<!ATTLIST result
+			  name CDATA #IMPLIED
+			  redirect (true|false) "false">
+	
+]>
+
+<jfunit>
+	<actions>
+		<action name="login" class="com.jfunit.actions.LoginAction">
+			<result name="input">index.jsp</result>
+			<result name="success">success.jsp</result>
+		</action>
+	</actions>
+</jfunit>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  	<servlet-name>ActionServlet</servlet-name>
+  	<servlet-class>com.jfunit.servlet.ActionServlet</servlet-class>
+  	<init-param>
+  		<param-name>config</param-name>
+  		<param-value>jfunit.xml</param-value>
+  	</init-param>
+  	<load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>ActionServlet</servlet-name>
+  	<url-pattern>*.action</url-pattern>
+  </servlet-mapping>
+</web-app>
